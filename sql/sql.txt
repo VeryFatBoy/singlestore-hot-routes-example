@@ -1,0 +1,21 @@
+CREATE DATABASE IF NOT EXISTS hot_routes;
+
+USE hot_routes;
+
+CREATE ROWSTORE TABLE bakerloo_stops (
+     stn_name VARCHAR(50),
+     geometry GEOGRAPHYPOINT
+);
+
+CREATE ROWSTORE TABLE bakerloo_sections (
+     geometry GEOGRAPHY
+);
+
+CREATE ROWSTORE TABLE crimes (
+     crime_type VARCHAR(100),
+     geometry GEOGRAPHYPOINT
+);
+
+CREATE ROWSTORE TABLE bakerloo_line_buff (
+     geometry GEOGRAPHY
+);
