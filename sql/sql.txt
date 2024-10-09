@@ -2,20 +2,24 @@ CREATE DATABASE IF NOT EXISTS hot_routes;
 
 USE hot_routes;
 
-CREATE ROWSTORE TABLE bakerloo_stops (
+DROP TABLE IF EXISTS bakerloo_stops;
+CREATE ROWSTORE TABLE IF NOT EXISTS bakerloo_stops (
      stn_name VARCHAR(50),
      geometry GEOGRAPHYPOINT
 );
 
-CREATE ROWSTORE TABLE bakerloo_sections (
+DROP TABLE IF EXISTS bakerloo_sections;
+CREATE ROWSTORE TABLE IF NOT EXISTS bakerloo_sections (
      geometry GEOGRAPHY
 );
 
-CREATE ROWSTORE TABLE crimes (
+DROP TABLE IF EXISTS crimes;
+CREATE ROWSTORE TABLE IF NOT EXISTS crimes (
      crime_type VARCHAR(100),
      geometry GEOGRAPHYPOINT
 );
 
-CREATE ROWSTORE TABLE bakerloo_line_buff (
+DROP TABLE IF EXISTS bakerloo_line_buff;
+CREATE ROWSTORE TABLE IF NOT EXISTS bakerloo_line_buff (
      geometry GEOGRAPHY
 );
